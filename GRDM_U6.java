@@ -5,8 +5,18 @@ import ij.gui.NewImage;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
+public class GRDM_U6_s0577683 implements PlugInFilter {
+	static ImagePlus imp; // ImagePlus object
+	
+	public static void main(String args[]) {
 
-public class Scale_ implements PlugInFilter {
+		IJ.open("Component.jpg");
+
+
+		GRDM_U6_s0577683 pw = new GRDM_U6_s0577683();
+		GRDM_U6_s0577683.imp = IJ.getImage();
+		pw.run(imp.getProcessor());
+	}
 
 	public int setup(String arg, ImagePlus imp) {
 		if (arg.equals("about"))
